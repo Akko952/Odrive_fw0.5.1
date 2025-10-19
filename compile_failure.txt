@@ -1,0 +1,251 @@
+tup warning: generated file 'build\obj\fibre_cpp_protocol.cpp.o' was deleted outside of tup. This file may be re-created on the next update.
+tup warning: generated file 'build\obj\communication_interface_uart.cpp.o' was deleted outside of tup. This file may be re-created on the next update.
+tup warning: generated file 'build\obj\communication_interface_i2c.cpp.o' was deleted outside of tup. This file may be re-created on the next update.
+tup warning: generated file 'build\obj\autogen_version.c.o' was deleted outside of tup. This file may be re-created on the next update.
+tup warning: generated file 'build\obj\FreeRTOS-openocd.c.o' was deleted outside of tup. This file may be re-created on the next update.
+Using python command "python -B"
+*  48% 24) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/low_level.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_low_level.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\math.h:36,
+                 from Board/v3/Drivers/CMSIS/Include/arm_math.h:319,
+                 from MotorControl/low_level.cpp:8:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/low_level.cpp:22:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=571 failed with return value 1
+*  51% 23) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/thermistor.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_thermistor.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/thermistor.cpp:1:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/thermistor.cpp:1:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=579 failed with return value 1
+*  54% 22) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/encoder.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_encoder.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/encoder.cpp:2:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/encoder.cpp:2:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=581 failed with return value 1
+*  57% 21) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/motor.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_motor.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/motor.cpp:5:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/motor.cpp:5:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=577 failed with return value 1
+*  60% 20) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/axis.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_axis.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/axis.cpp:6:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/axis.cpp:6:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=575 failed with return value 1
+*  62% 19) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/sensorless_estimator.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_sensorless_estimator.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/sensorless_estimator.cpp:2:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/sensorless_estimator.cpp:2:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=587 failed with return value 1
+*  65% 18) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/endstop.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_endstop.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/endstop.cpp:1:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/endstop.cpp:1:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=583 failed with return value 1
+*  67% 17) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/trapTraj.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_trapTraj.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\math.h:36,
+                 from MotorControl/trapTraj.cpp:1:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/trapTraj.cpp:2:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=589 failed with return value 1
+*  70% 16) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/controller.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_controller.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/controller.cpp:2:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/controller.cpp:2:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=585 failed with return value 1
+*  73% 15) arm-none-eabi-g++ -std=c++17 -Wno-register -c MotorControl/main.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/MotorControl_main.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from MotorControl/odrive_main.h:12,
+                 from MotorControl/main.cpp:3:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from MotorControl/main.cpp:3:0:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=591 failed with return value 1
+*  76% 14) arm-none-eabi-g++ -std=c++17 -Wno-register -c communication/can_simple.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/communication_can_simple.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from communication/interface_can.hpp:6,
+                 from communication/can_simple.hpp:4,
+                 from communication/can_simple.cpp:2:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from communication/interface_can.hpp:7:0,
+                 from communication/can_simple.hpp:4,
+                 from communication/can_simple.cpp:2:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=597 failed with return value 1
+*  83% 13) arm-none-eabi-g++ -std=c++17 -Wno-register -c communication/communication.cpp -DHW_VERSION_MAJOR=3 -DHW_VERSION_MINOR=6 -DHW_VERSION_VOLTAGE=56 -DUSB_PROTOCOL_NATIVE -DUART_PROTOCOL_ASCII -D__weak="__attribute__((weak))" -D__packed="__attribute__((__packed__))" -DUSE_HAL_DRIVER -DSTM32F405xx -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wdouble-promotion -Wfloat-conversion -fdata-sections -ffunction-sections -O2 -ffast-math -fno-finite-math-only -IDrivers/DRV8301 -IMotorControl -Ifibre/cpp/include -I. -Idoctest -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/include -IBoard/v3/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -IBoard/v3/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc -IBoard/v3/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -IBoard/v3/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IBoard/v3/Drivers/CMSIS/Include -IBoard/v3/Inc -I. -IDrivers/DRV8301  -o build/obj/communication_communication.cpp.o
+In file included from c:\program files\gcc-arm-none-eabi-7-2018-q2-update-win32\arm-none-eabi\include\c++\7.3.1\cmath:45:0,
+                 from fibre/cpp/include/fibre/protocol.hpp:13,
+                 from communication/interface_usb.h:5,
+                 from communication/communication.cpp:6:
+MotorControl/odrive_main.h:127:37: error: redeclaration of 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = INFINITY; // Max current [A] the power supply can source
+                                     ^
+In file included from communication/interface_can.hpp:7:0,
+                 from communication/communication.cpp:8:
+MotorControl/odrive_main.h:116:37: note: previous declaration 'float BoardConfig_t::dc_max_positive_current'
+     float dc_max_positive_current = 50.0f;
+                                     ^~~~~
+MotorControl/odrive_main.h:128:38: error: redeclaration of 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -0.000001f; // Max current [A] the power supply can sink. You most likely want a non-positive value here. Set to -INFINITY to disable.
+                                      ^~~~~~~~~
+MotorControl/odrive_main.h:117:38: note: previous declaration 'float BoardConfig_t::dc_max_negative_current'
+     float dc_max_negative_current = -20.0f;
+                                      ^~~~~
+ *** tup messages ***
+ *** Command ID=599 failed with return value 1
+ *** tup: 12 jobs failed.
+make: *** [Makefile:14: all] Error 1
